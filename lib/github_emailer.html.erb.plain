@@ -1,0 +1,33 @@
+<html>
+<head>
+</head>
+<body>
+	<h1>Github update</h1>
+	
+	<h2>Added</h2>
+	<% added.each do |repo, changes| %>
+		<% is_new_repo = changes.inject(0) { |result, (change, values)| result + values.count }.zero? %>
+		<% if is_new_repo %>
+			<h3>New Repo! <%= repo %></h3>
+		<% else %>
+			<h3><%= repo %></h3>
+				<ul>				
+					<% changes.each do |change,users| %>
+						<li><%= users.count %> <%= change %> added
+						<% unless users.empty? %>
+							<ul>
+							<% users.each do |user| %>
+							<li><a href="https://github.com/<%= user %>"><%= user %></a></li>
+							<% end %>
+							</ul>
+						<% end %>
+						</li>
+					<% end %>
+
+				</ul>
+		<% end %>
+ 	<% end %>
+	
+	
+</body>
+</html>
