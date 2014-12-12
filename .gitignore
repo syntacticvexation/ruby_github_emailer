@@ -1,3 +1,4 @@
+repo_cache.yml
 *.gem
 *.rbc
 .bundle

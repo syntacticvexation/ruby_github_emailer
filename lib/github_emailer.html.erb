@@ -303,8 +303,8 @@ Respmail v1.1 (http://charlesmudy.com/respmail/)
                                                             <table border="0" cellpadding="30" cellspacing="0" width="100%">
                                                                 <tr>
                                                                     <td align="center" valign="top" class="textContent">
-                                                                        <h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;"><%= username %></h1>
-                                                                        <h2 style="text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:10px;color:#205478;line-height:135%;">Github update</h2>
+                                                                        <h1 style="color:#FFFFFF;line-height:100%;font-family:Helvetica,Arial,sans-serif;font-size:35px;font-weight:normal;margin-bottom:5px;text-align:center;"><%= @config[:github_user] %></h1>
+                                                                        <h2 style="text-align:center;font-weight:normal;font-family:Helvetica,Arial,sans-serif;font-size:23px;margin-bottom:10px;color:#205478;line-height:135%;">github Status Update</h2>
                                                                     </td>
                                                                 </tr>
                                                             </table>
@@ -391,7 +391,7 @@ Respmail v1.1 (http://charlesmudy.com/respmail/)
                                                                         <table border="0" cellpadding="0" cellspacing="0" width="90" style="max-width:100%;">
                                                                             <tr>
                                                                                 <td align="left" class="textContent">
-                                                                                    <img src="http://pixabay.com/static/uploads/photo/2013/07/04/06/08/new-143095_640.jpg" width="73" class="flexibleImageSmall" style="max-width:100%;" alt="Text" title="Text" />
+                                                                                    <img src="new.jpg" width="73" class="flexibleImageSmall" style="max-width:100%;" alt="Text" title="Text" />
                                                                                 </td>
                                                                             </tr>
                                                                         </table>
@@ -400,7 +400,7 @@ Respmail v1.1 (http://charlesmudy.com/respmail/)
                                                                         <table class="flexibleContainerBoxNext" border="0" cellpadding="0" cellspacing="0" width="350" style="max-width:100%;">
                                                                             <tr>
                                                                                 <td align="left" class="textContent">
-                                                                                    <h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;"><a href="https://github.com/<%= username %>/<%= repo %>"><%= repo %></a></h3>
+                                                                                    <h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;"><a href="https://github.com/<%= @config[:github_user] %>/<%= repo %>"><%= repo %></a></h3>
                                                                                     <div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;"></div>
                                                                                 </td>
                                                                             </tr>
@@ -451,7 +451,7 @@ Respmail v1.1 (http://charlesmudy.com/respmail/)
                                                                         <table class="flexibleContainerBoxNext" border="0" cellpadding="0" cellspacing="0" width="350" style="max-width:100%;">
                                                                             <tr>
                                                                                 <td align="left" class="textContent">
-                                                                                    <h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;"><a href="https://github.com/<%= username %>/<%= repo %>"><%= repo %></a></h3>
+                                                                                    <h3 style="color:#5F5F5F;line-height:125%;font-family:Helvetica,Arial,sans-serif;font-size:20px;font-weight:normal;margin-top:0;margin-bottom:3px;text-align:left;"><a href="https://github.com/<%= @config[:github_user] %>/<%= repo %>"><%= repo %></a></h3>
                                                                                     <div style="text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#5F5F5F;line-height:135%;">
 <ul>
                                         <% changes.each do |change,users| %>

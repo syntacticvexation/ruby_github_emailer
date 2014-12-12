@@ -20,6 +20,7 @@ Gem::Specification.new do |spec|
   
   spec.add_dependency "github_api"
   spec.add_dependency "easy_diff"
+  spec.add_dependency "pony"
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
